@@ -12,3 +12,10 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 ENTRYPOINT [ "python3" ]
 CMD [ "app.py" ]
+
+
+
+export DBUSER=root
+export DATABASE=employees_info
+export DBPWD=pw
+export APP_COLOR=blue

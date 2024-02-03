@@ -14,8 +14,3 @@ ENTRYPOINT [ "python3" ]
 CMD [ "app.py" ]
 
 
-
-export DBUSER=root
-export DATABASE=employees_info
-export DBPWD=pw
-export APP_COLOR=blue

@@ -32,11 +32,9 @@ jobs:
         ECR_REPOSITORY: mysql-repo-assignment1
         IMAGE_TAG: v1.1
       run: |
-        #cd Chapter02/kubia/
-        #ls -ltra
-        # Docker build image database
+        
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f Dockerfile_mysql .
-        # Docker push image
+        
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
     - name: Build, test, tag, and push image for Amazon ECR app
       env:
@@ -44,9 +42,7 @@ jobs:
         ECR_REPOSITORY: webapp-repo-assignment1
         IMAGE_TAG: v1.1
       run: |
-        #cd Chapter02/kubia/
-        #ls -ltra
-        # Docker build app
+        
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f Dockerfile .
-        # Docker push
+        
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
